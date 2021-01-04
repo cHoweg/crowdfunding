@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+
+        <!-- 抑制注释生成 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- mvn mybatis-generator:generate 配置数据库位置 ，配置虚拟机上的mysql ip地址；不采用安全协议连接，否则无法逆向生成 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://172.16.55.3:3306/project_crowd"
+                        userId="root" password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- javaBean生成在哪里 -->
+        <javaModelGenerator
+                targetPackage="com.egc.crowd.bean"
+                targetProject="../egcrowdfunding04-admin-entity/src/main/java">
+            <!-- 是否允许子包 -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 是否对modal添加构造函数 -->
+            <property name="constructorBased" value="true" />
+            <!-- 是否清理从数据库中查询出的字符串左右两边的空白字符 -->
+            <property name="trimStrings" value="true" />
+            <!-- 建立modal对象是否不可改变 即生成的modal对象不会有setter方法，只有构造方法 -->
+            <property name="immutable" value="false" />
+        </javaModelGenerator>
+
+        <!-- sqlMap sql映射文件（xml mapper文件） -->
+        <sqlMapGenerator targetPackage="mybatis.mapper"
+                         targetProject="../egcrowdfunding02-admin-webui/src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- javaClient：java接口生成的地方 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.egc.crowd.mapper"
+                             targetProject="../egcrowdfunding03-admin-component/src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+
+        <!-- 数据库表名及对应的 Java 模型类名 -->
+        <table tableName="t_admin" domainObjectName="Admin"/>
+    </context>
+</generatorConfiguration>

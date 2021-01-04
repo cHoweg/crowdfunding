@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding01-admin-parent.iml" filepath="$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding01-admin-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding02-admin-webui/egcrowdfunding02-admin-webui.iml" filepath="$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding02-admin-webui/egcrowdfunding02-admin-webui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding03-admin-component/egcrowdfunding03-admin-component.iml" filepath="$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding03-admin-component/egcrowdfunding03-admin-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding04-admin-entity/egcrowdfunding04-admin-entity.iml" filepath="$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding04-admin-entity/egcrowdfunding04-admin-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding05-common-util/egcrowdfunding05-common-util.iml" filepath="$PROJECT_DIR$/egcrowdfunding01-admin-parent/egcrowdfunding05-common-util/egcrowdfunding05-common-util.iml" />
+    </modules>
+  </component>
+</project>
