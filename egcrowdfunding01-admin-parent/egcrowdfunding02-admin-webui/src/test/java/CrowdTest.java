@@ -1,7 +1,10 @@
 import com.egc.crowd.bean
         .Admin;
+import com.egc.crowd.bean.Role;
 import com.egc.crowd.mapper.AdminMapper;
+import com.egc.crowd.mapper.RoleMapper;
 import com.egc.crowd.service.AdminService;
+import org.apache.ibatis.annotations.Mapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -34,13 +37,6 @@ public class CrowdTest {
 
     @Resource
     private AdminService adminService;
-
-    @Test
-    public void test() {
-        for (int i = 0; i < 230; i++) {
-            adminMapper.insert(new Admin(null, "GDMUDog" + i, "userPswd" + i, "DOG" + i, "DOG" + i + "@email.com", null));
-        }
-    }
 
     @Test
     public void testCrowdConnection() throws SQLException {

@@ -81,7 +81,7 @@ public class testController {
 
         modelMap.addAttribute("adminList", adminList);
 
-         System.out.println(10/0);
+        // System.out.println(10/0);
 
         // String a = null;
 

@@ -15,4 +15,5 @@ public class StringTest {
         String encoded = CrowdUtil.MD5(source);
         System.out.println(encoded);
     }
+
 }
